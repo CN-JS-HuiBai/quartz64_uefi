@@ -81,18 +81,6 @@
 						algo = "sha256";
 				};
 		};
-		optee {
-			description = "OP-TEE";
-			data = /incbin/("./edk2-rockchip-non-osi/rkbin/bin/rk35/rk3568_bl32_v2.01.bin");
-			type = "firmware";
-			arch = "arm64";
-			os = "op-tee";
-			compression = "none";
-			load = <0x8400000>;
-			hash {
-				algo = "sha256";
-			};
-		};
 		fdt {
 			description = "UEFI dtb";
 			data = /incbin/("./dtb/@BOARDTYPE@.dtb");
